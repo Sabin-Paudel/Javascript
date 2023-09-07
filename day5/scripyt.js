@@ -1,20 +1,23 @@
 const outputDiv = document.getElementById('output');
 
-const generatejoke=async()=>{
-  try{
-    const setHeader={
-      headers:{
-        Accept:'application/json'
-      }
-    }
-
-    const jokes=await fetch('https://icanhazdadjoke.com/',setHeader);
-    const data=await jokes.json();
-    outputDiv.innerHTML=data.joke;
-  }
-  catch(err){
-    outputDiv.innerHTML=`Error is ${err}`;
+async function fetchData(url, callback) {
+  try {
+    const response = await fetch(url);
+    const data = await response.json();
+    callback(data);
+  } catch (error) {
+    outputDiv.innerHTML = `${error}`;
   }
 }
 
-generatejoke();
+function processData(data) {
+ 
+    outputDiv.innerHTML = `
+      <h2>${data.title}</h2>
+      <p>${data.body}</p>
+    `;
+  }
+
+ 
+const apiUrl = 'https://jsonplaceholder.typicode.com/posts/1';
+fetchData(apiUrl, processData);
