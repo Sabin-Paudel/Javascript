@@ -1,0 +1,78 @@
+
+body,html {
+  margin: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  border: 1px solid black;
+  height: 90%;
+  width: 100%;
+  padding: 30px;
+  background-color: #1f242d;
+  border-radius: 20px;
+}
+
+.bmi {
+  text-align: center;
+  padding-bottom: 30px;
+  border-bottom: 2px solid white; /* Assuming you want the border to be white */
+}
+
+p {
+  color: white;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+input[type="text"] {
+  font-size: 20px;
+  height: 30px;
+  border-radius: 30px;
+  background-color: #1f242d;
+  border: 1px solid #60656c;
+  width: 100%;
+  margin-top: 20px;
+  color: white;
+  outline: none;
+  padding: 8px 10px; /* Adjusted padding for consistency */
+}
+
+input[type="text"]:focus {
+  outline: none;
+  background-color: #313743;
+}
+
+.button {
+  width: 100%;
+  padding: 10px;
+  background-color: #1f242d;
+  border: 1px solid #60656c; 
+  color: #fff;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.button:hover {
+  background-color: #333945;
+}
+
+.output {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  padding-bottom: 10px;
+  border-bottom: 2px solid white; 
+}
+
+.error_height,.error_weight{
+  font-size: 17px;
+  text-align: center;
+}
