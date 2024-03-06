@@ -1,24 +1,13 @@
-const paragraph=document.getElementById("para");
+let show = document.querySelector('.show');
+let close = document.querySelector('.close');
+let model = document.querySelector('.model');
 
-paragraph.addEventListener("mouseover",()=>{
-  const word=paragraph.innerText.split(" ");
-
-  for(let i=0;i<word.length;i++){
-    if(word[i] === word[i].toUpperCase()){
-      word[i]=`<span class="highlight">${word[i]}</span>`;
-    }
-  }
-  paragraph.innerHTML= word.join(" ");
+show.addEventListener('click', () => {
+  model.style.opacity = 1;
+  model.style.pointerEvents = 'auto'; 
 });
 
-paragraph.addEventListener("mouseout",()=>{
-
-  paragraph.innerHTML=paragraph.innerText;
-
+close.addEventListener('click', () => {
+  model.style.opacity = 0;
+  model.style.pointerEvents = 'none'; 
 });
-
-
-
-
-
-
