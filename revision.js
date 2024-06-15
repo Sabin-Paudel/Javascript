@@ -27,3 +27,19 @@ const arr3=arr.reduce((prev,curr)=>{
 console.log(arr1);
 console.log(arr2);
 console.log(arr3);
+
+
+//3rd
+
+const generate=async()=>{
+  let response = await fetch('https://jsonplaceholder.typicode.com/todos/1');
+  let items= await response.json();
+  let data={
+    id:items.userId,
+    title:items.title,
+    complete:items.completed,
+  };
+  console.log(data.id,data.title,data.complete);
+}
+
+generate();
